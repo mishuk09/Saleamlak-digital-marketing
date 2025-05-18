@@ -65,7 +65,7 @@ const Web = () => {
             <div >
                 <div className='max-w-7xl mx-auto'>
 
-                    <HomePage ch1='Website ' head1='Get website' head2='With' head3='Plexus' btnname="Get your website" btnhref='/contact'
+                    <HomePage ch1='Website ' head1='Get website' head2='With' head3='Saleamlak' btnname="Get your website" btnhref='/contact'
                         description='We specialize in creating fantastic websites that not only look great but also function smoothly.' image={web}>
                     </HomePage>
                 </div>

@@ -27,7 +27,7 @@ const BlogSection = () => {
 
 
     return (
-        <section className="py-12 mt-10 px-4 max-w-7xl mx-auto">
+        <section className="py-12  px-4 max-w-7xl mx-auto">
 
             <Headline headline=" Let's update with our Blog" ch1="Our" ch2="Latest" ch3="Blog" seemore="/blog " />
 

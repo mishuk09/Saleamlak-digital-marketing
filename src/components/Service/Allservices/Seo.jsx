@@ -74,6 +74,13 @@ const Seo = () => {
             title: "Analytics",
             details: "Tracking and analyzing website performance for data-driven decisions.",
         },
+        {
+            id: 5,
+            img: analysis,
+            title: "Technical SEO",
+            details: "Optimizing website structure, speed, and mobile-friendliness for better search performance.",
+
+        },
     ];
 
     const techItem = [
@@ -146,7 +153,7 @@ const Seo = () => {
             <div className=''>
                 <div className=' max-w-7xl mx-auto'>
 
-                    <HomePage ch1='Seo Optimization' head1='Get Seo Service' head2='With' head3='Plexus' btnname="Get Seo Service" btnhref='/contact'
+                    <HomePage ch1='Seo Optimization' head1='Get Seo Service' head2='With' head3='Saleamlak' btnname="Get Seo Service" btnhref='/contact'
                         description='Elevating online visibility and organic traffic through strategic optimization techniques' image={seo}>
                     </HomePage>
                 </div>

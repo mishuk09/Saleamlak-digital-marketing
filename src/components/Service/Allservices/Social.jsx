@@ -97,7 +97,7 @@ const Social = () => {
         <div className='  '>
             <div className=' '>
                 <div className=' max-w-7xl mx-auto'>
-                    <HomePage ch1='Social Media' head1='Get Social Service' head2='from' head3='Plexus' btnname="Get social service" btnhref='/contact'
+                    <HomePage ch1='Social Media' head1='Get Marketing' head2='from' head3='Saleamlak' btnname="Get social service" btnhref='/contact'
                         description='We specialize in crafting powerful social media marketing strategies that not only boost engagement but also drive real results! 🚀.' image={graphic}>
                     </HomePage>
 

@@ -28,10 +28,10 @@ const Success = () => {
 
         try {
             await emailjs.sendForm(
-                "service_p3jakff",
-                "template_cszjdjo",
+                "service_u4wc3g9",
+                "template_ffen4jl",
                 form.current,
-                "uELA4WD47qGEFXLdA"
+                "0B5zahSBnJCOzRJ5b"
             );
             setSuccessMessage("📧 Email Sent Successfully!");
             setTimeout(() => {

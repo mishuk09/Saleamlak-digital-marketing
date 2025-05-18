@@ -22,7 +22,7 @@ const Home = () => {
                         Grow Your Business <br /> with
                         <span className='text-blue-600 ms-4 inline-block'>
                             Saleamlak
-                            {/* Image Below Wallet Text */}
+                           
                             <div className='mt-[-10px]'>
                                 <img src={underimg} alt="undereffect" className='w-[150px] md:w-[230px] h-auto' />
                             </div>

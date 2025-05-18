@@ -1,10 +1,10 @@
-import { Facebook, Instagram, Code, Mail, Settings, Layers, MapPin, User } from 'lucide-react';
+import { Facebook, Instagram, Code, Mail, Settings, Layers, MapPin, User, Lock, Copyright } from 'lucide-react';
 
 const Footer = () => {
     return (
         <div id='footer' className='w-full'>
-            <div className='bg-slate-950  pt-10   px-4  h-auto  lg:h-[230px]'>
-                <div className="max-w-7xl mx-auto px-4 md:px-8 pb-10">
+            <div className='bg-slate-950  pt-10   px-4  h-auto  '>
+                <div className="max-w-7xl border-b border-gray-500 mx-auto px-4 md:px-8 pb-6">
                     <div className="flex flex-col md:flex-row justify-between items-start text-center md:text-left text-slate-300 gap-10">
 
                         {/* Branding Section */}
@@ -30,6 +30,9 @@ const Footer = () => {
                             <a href="/social" className="font-nunito text-sm mt-2 hover:text-blue-500">
                                 <Settings className="inline-block mr-2" size={20} /> Social Media
                             </a>
+                            <a href="/privacy" className="font-nunito text-sm mt-2 hover:text-blue-500">
+                                <Lock className="inline-block mr-2" size={20} />Privacy & Policy
+                            </a>
                         </div>
 
                         {/* Contact Section */}
@@ -42,7 +45,7 @@ const Footer = () => {
                                 <Mail className="inline-block mr-2" size={20} /> services@seomart.org.in
                             </p>
                             <div className="mt-3 space-x-4">
-                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                <a href="https://mishukinfo.com/" target="_blank" rel="noopener noreferrer">
                                     <Facebook className="inline-block hover:text-blue-500" size={24} />
                                 </a>
                                 <a href="#" target="_blank" rel="noopener noreferrer">
@@ -53,6 +56,7 @@ const Footer = () => {
 
                     </div>
                 </div>
+                <p className='text-gray-300 flex py-4  items-center justify-center'> <Copyright size={18} className='me-2'/>SEOMart - Digital Marketing Agency</p>
 
 
             </div>

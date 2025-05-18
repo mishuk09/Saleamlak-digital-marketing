@@ -76,7 +76,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_p3jakff', 'template_cszjdjo', form.current, 'uELA4WD47qGEFXLdA')
+        emailjs.sendForm('service_u4wc3g9', 'template_ffen4jl', form.current, '0B5zahSBnJCOzRJ5b')
             .then(() => {
                 alert('Email Sent Successfully');
                 setFormData({ name: '', email: '', phoneNumber: '', subject: '', message: '' });

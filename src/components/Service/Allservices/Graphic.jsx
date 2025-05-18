@@ -82,7 +82,7 @@ const Graphic = () => {
         <div className='  '>
             <div className=' '>
                 <div className=' max-w-7xl mx-auto'>
-                    <HomePage ch1='Graphic Design' head1='Get Graphic Design' head2='With' head3='Plexus' btnname="Get Graphic Design" btnhref='/contact'
+                    <HomePage ch1='Graphic Design' head1='Get Graphic Design' head2='With' head3='Saleamlak' btnname="Get Graphic Design" btnhref='/contact'
                         description='We specialize in designing fantastic websites that not only look great but also function smoothly.' image={graphic}>
                     </HomePage>
 

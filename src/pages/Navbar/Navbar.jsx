@@ -14,7 +14,7 @@ const Navbar = () => {
             <nav className="max-w-7xl mx-auto flex items-center justify-between px-2 py-6">
                 {/* Logo */}
                 <a href="/" className="text-2xl font-bold flex items-center">
-                 SEOMart
+                    SEOMart
                 </a>
 
                 {/* Mobile Toggle Button */}
@@ -49,10 +49,10 @@ const Navbar = () => {
                                 <a href="/about" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="About Us" className="mr-2">ℹ️</span> About Us
                                 </a>
-                                {/* <a href="#" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
-                                    <span role="img" aria-label="Team" className="mr-2">👥</span> Team
+                                <a href="privacy" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                                    <span role="img" aria-label="Team" className="mr-2">🔒</span> Privacy & Policy
                                 </a>
-                                <a href="#" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                                {/* <a href="#" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="Testimonials" className="mr-2">🗣️</span> Testimonials
                                 </a>
                                 <a href="#" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
@@ -81,11 +81,11 @@ const Navbar = () => {
                                 <a href="/seo" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="SEO" className="mr-2">🔍</span> SEO
                                 </a>
-                                <a href="/graphic" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                                {/* <a href="/graphic" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="Marketing" className="mr-2">🎨</span>Graphic Design
-                                </a>
+                                </a> */}
                                 <a href="social" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
-                                    <span role="img" aria-label="App Development" className="mr-2">📱</span>Social Media
+                                    <span role="img" aria-label="App Development" className="mr-2">📱</span>Marketing
                                 </a>
                             </div>
 
@@ -105,7 +105,7 @@ const Navbar = () => {
                     <a href="/contact" className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-blue-200 text-blue-600 hover:bg-blue-500 hover:text-white transition duration-150">
                         <PhoneCall size={16} />
                     </a>
-                    <span className="hidden md:block text-lg font-medium">+91 96879 91266</span>
+                    <span className="hidden md:block text-lg font-medium">+91 9824204169</span>
                     <a href="/contact" className="pe-2 ps-4 py-1 cursor-pointer bg-white hover:bg-black hover:text-white transition-all duration-300 ease-in-out text-blue-500 rounded-full font-medium flex items-center space-x-2">
                         <span>Get Started</span>
                         <span className="rounded-full px-2 py-2 bg-blue-500 text-white">

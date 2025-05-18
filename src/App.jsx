@@ -17,8 +17,8 @@ import Adminpage from './components/Login/Adminpage/Adminpage'
 import ManageBlog from './components/Login/Adminpage/DeletePost'
 import AddBlogs from './pages/Blog/AddBlogs'
 import Editblogs from './components/Login/Adminpage/Editblogs'
-import Blog from './pages/Blog/Blog'
 import About from './pages/About/About'
+import PrivacyPolicy from './components/PrivacyPolicy'
 // import BlogMain from './pages/Blog/BlogMain'
 
 function App() {
@@ -29,13 +29,14 @@ function App() {
 
       <Routes>
         <Route path='/' element={<ChildApp />} />
-        <Route path='/contacts' element={<ContactPage />} />
+        <Route path='/contact' element={<ContactPage />} />
         <Route path='/signin' element={<Signin />} />
-        <Route path='/webs' element={<Web />} />
-        <Route path='/seos' element={<Seo />} />
-        <Route path='/graphics' element={<Graphic />} />
-        <Route path='/socials' element={<Social />} />
+        <Route path='/web' element={<Web />} />
+        <Route path='/seo' element={<Seo />} />
+        {/* <Route path='/graphic' element={<Graphic />} /> */}
+        <Route path='/social' element={<Social />} />
         <Route path='/about' element={<About />} />
+        <Route path='/privacy' element={<PrivacyPolicy />} />
 
 
         {/* <Route path='/blog' element={<Blog />} /> */}
