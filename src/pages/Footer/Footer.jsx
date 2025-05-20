@@ -2,7 +2,7 @@ import { Facebook, Instagram, Code, Mail, Settings, Layers, MapPin, User, Lock, 
 
 const Footer = () => {
     return (
-        <div id='footer' className='w-full'>
+        <div id='footer' className='w-full mt-20'>
             <div className='bg-slate-950  pt-10   px-4  h-auto  '>
                 <div className="max-w-7xl border-b border-gray-500 mx-auto px-4 md:px-8 pb-6">
                     <div className="flex flex-col md:flex-row justify-between items-start text-center md:text-left text-slate-300 gap-10">

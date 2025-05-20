@@ -13,7 +13,7 @@ const BlogMain = () => {
     const shareUrl = encodeURIComponent(window.location.href);
 
     useEffect(() => {
-        axios.get('https://plexus-backend-1.onrender.com/posts/')
+        axios.get('https://saleamlak-digital-marketing-backend.onrender.com/posts/')
             .then(response => {
                 // setPosts(response.data.slice(0, 12));
                 setBlogs(response.data);

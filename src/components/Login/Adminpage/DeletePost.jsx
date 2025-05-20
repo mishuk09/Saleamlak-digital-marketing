@@ -14,7 +14,7 @@ const DeletePost = ({ id, onClose, onDelete }) => {
 
     const handleDelete = () => {
         setLoading(true)
-        axios.delete(`https://plexus-backend-1.onrender.com/posts/${id}`)
+        axios.delete(`https://saleamlak-digital-marketing-backend.onrender.com/posts/${id}`)
             .then(() => {
                 console.log('Post deleted.');
                 setSuccess(true)

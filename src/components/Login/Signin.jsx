@@ -1,86 +1,160 @@
-import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import app from '../Firebase/Firebase.init';
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
 
-const auth = getAuth(app);
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import axios from 'axios';
+import Alert from '@mui/material/Alert';
+import LoadingSpin from '../utills/LoadingSpin';
 
-export default function Signin() {
-    const [isLogin, setIsLogin] = useState(false);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+const defaultTheme = createTheme();
 
-    const getEmail = (e) => setEmail(e.target.value);
-    const getPassword = (e) => setPassword(e.target.value);
+export default function SignIn() {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-            .then(() => {
-                setEmail('');
-                setPassword('');
-                setIsLogin(true);
-                setError(null);
-            })
-            .catch(err => setError(err.message));
+    const [showAlert, setShowAlert] = React.useState(false);
+    const [alertMessage, setAlertMessage] = React.useState('');
+    const [alertSeverity, setAlertSeverity] = React.useState('success');
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [loading, setLoading] = React.useState(false);
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setLoading(true);
+
+        if (!email || !password) {
+            setShowAlert(true);
+            setAlertMessage('Email and password are required.');
+            setAlertSeverity('error');
+
+            setTimeout(() => {
+                setShowAlert(false);
+            }, 2000);
+
+            return;
+        }
+
+        const userData = {
+            email,
+            password,
+        };
+
+        try {
+            const response = await axios.post('https://saleamlak-digital-marketing-backend.onrender.com/signin', userData);
+            console.log(response.data);
+
+            // Save token to localStorage
+            localStorage.setItem('token', response.data.token);
+            setShowAlert(true);
+            setAlertMessage('Login successful!');
+            setAlertSeverity('success');
+            setEmail('');
+            setPassword('');
+
+            setTimeout(() => {
+                setShowAlert(false);
+                window.location.href = '/adminpage'; // Redirect to dashboard or desired page
+            }, 500);
+        } catch (error) {
+            console.error('There was an error!', error);
+            setShowAlert(true);
+            setAlertMessage('Invalid credentials. Please try again.');
+            setAlertSeverity('error');
+
+            setTimeout(() => {
+                setShowAlert(false);
+            }, 2000);
+        } finally {
+            setLoading(false);
+        }
     };
 
-    if (isLogin) {
-        return <Navigate to="/adminpage" />;
-    }
-
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
-                <div className="flex flex-col items-center mb-6">
-                    <div className="bg-purple-600 text-white rounded-full p-3 mb-2">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0 1.104-.896 2-2 2s-2-.896-2-2m0 0V9a4 4 0 118 0v2m0 0c0 1.104-.896 2-2 2s-2-.896-2-2" />
-                        </svg>
-                    </div>
-                    <h2 className="text-2xl font-semibold text-gray-800">Sign In</h2>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
-                        <input
-                            type="email"
+        <ThemeProvider theme={defaultTheme}>
+            <Container className="mb-20" component="main" maxWidth="xs">
+                <CssBaseline />
+                <Box
+                    sx={{
+                        marginTop: 8,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                        <LockOutlinedIcon />
+                    </Avatar>
+                    <Typography component="h1" variant="h5">
+                        Sign in
+                    </Typography>
+                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                        <TextField
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            margin="normal"
+                            required
+                            fullWidth
+                            id="email" P
+                            label="Email Address"
                             name="email"
-                            id="email"
-                            required
-                            onBlur={getEmail}
-                            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            autoComplete="email"
+                            autoFocus
                         />
-                    </div>
-                    <div>
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
-                        <input
-                            type="password"
+                        <TextField
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            margin="normal"
+                            required
+                            fullWidth
                             name="password"
+                            label="Password"
+                            type="password"
                             id="password"
-                            required
-                            onBlur={getPassword}
-                            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                            autoComplete="current-password"
                         />
-                    </div>
-                   
-
-                    <button
-                        type="submit"
-                        className="w-full py-2 mt-10 px-4 bg-purple-600 text-white font-semibold rounded-md hover:bg-purple-700 transition duration-300"
-                    >
-                        Sign In
-                    </button>
-
-                    {error && (
-                        <div className="mt-4 text-sm text-red-600 bg-red-100 p-2 rounded-md">
-                            {error}
+                        {/* <FormControlLabel
+                            control={<Checkbox color="primary" />}
+                            label="Remember me"
+                        /> */}
+                        <Button
+                            type="submit"
+                            className='h-10'
+                            fullWidth
+                            variant="contained"
+                            sx={{ mt: 3, mb: 2 }}
+                        >
+                            {loading ? <LoadingSpin /> : 'Sign In'}
+                        </Button>
+                        <Grid container>
+                            {/* <Grid item xs>
+                                <Link href="#" variant="body2">
+                                    Forgot password?
+                                </Link>
+                            </Grid> */}
+                            {/* <Grid item>
+                                Don't have an account?
+                                <Link to='/signup' className='text-blue-500 mx-2' variant="body2">
+                                    Sign Up
+                                </Link>
+                            </Grid> */}
+                        </Grid>
+                    </Box>
+                    {showAlert && (
+                        <div className='absolute transition ease-in-out delay-150 top-0 right-0 mt-16 mr-4'>
+                            <Alert severity={alertSeverity}>
+                                {alertMessage}
+                            </Alert>
                         </div>
                     )}
-                </form>
-            </div>
-        </div>
+                </Box>
+            </Container>
+        </ThemeProvider>
     );
 }

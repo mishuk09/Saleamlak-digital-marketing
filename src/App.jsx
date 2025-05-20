@@ -19,6 +19,8 @@ import AddBlogs from './pages/Blog/AddBlogs'
 import Editblogs from './components/Login/Adminpage/Editblogs'
 import About from './pages/About/About'
 import PrivacyPolicy from './components/PrivacyPolicy'
+import SignUp from './components/Login/Signup'
+import ProtectedRoute from './components/utills/ProtectedRoute'
 // import BlogMain from './pages/Blog/BlogMain'
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
         <Route path='/' element={<ChildApp />} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/signin' element={<Signin />} />
+        <Route path='/addnewadmin' element={<SignUp />} />
         <Route path='/web' element={<Web />} />
         <Route path='/seo' element={<Seo />} />
         {/* <Route path='/graphic' element={<Graphic />} /> */}
@@ -43,27 +46,28 @@ function App() {
         <Route path='/blog' element={<BlogMain />} />
         <Route path='/product/:id' element={<BlogDetails />} />
 
+        <Route element={<ProtectedRoute />}>
 
-        <Route path='/adminpage' element={
-          <RequireAuth>
+
+          <Route path='/adminpage' element={
             <Adminpage />
-          </RequireAuth>
-        } />
-        <Route path='/addblog' element={
-          <RequireAuth>
+          } />
+          <Route path='/addblog' element={
+
             <AddBlogs />
-          </RequireAuth>
-        } />
-        <Route path='/manageblog' element={
-          <RequireAuth>
+
+          } />
+          <Route path='/manageblog' element={
+
             <ManageBlog />
-          </RequireAuth>
-        } />
-        <Route path='/editblogs' element={
-          <RequireAuth>
+
+          } />
+          <Route path='/editblogs' element={
+
             <Editblogs />
-          </RequireAuth>
-        } />
+
+          } />
+        </Route>
       </Routes>
 
       <Footer />

@@ -9,6 +9,8 @@ import Spin from "../../utills/Spin";
 import { getAuth, signOut } from 'firebase/auth';
 import { useAuthState } from "react-firebase-hooks/auth";
 import app from "../../Firebase/Firebase.init";
+import { useNavigate } from "react-router-dom";
+
 
 
 const auth = getAuth(app);
@@ -26,22 +28,24 @@ const Adminpage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 7; // Number of items per page
 
-
-    // Fetch search results dynamically
+    const navigate = useNavigate();
     const handleSearch = async (event) => {
         const query = event.target.value;
         setSearchQuery(query);
-        setCurrentPage(1); // Reset pagination to the first page
+        setCurrentPage(1);
 
-        if (query.trim() === "") {
+        if (query.trim().length < 2) {
             setSearchResults([]);
             return;
         }
 
         try {
-            const response = await fetch(`https://plexus-backend-1.onrender.com/posts/search?q=${query}`);
-            const data = await response.json();
+            const response = await fetch(`https://saleamlak-digital-marketing-backend.onrender.com/posts/search?q=${encodeURIComponent(query)}`);
+            if (!response.ok) {
+                throw new Error(`Server returned ${response.status}`);
+            }
 
+            const data = await response.json();
             setSearchResults(data.items || []);
         } catch (error) {
             console.error("Error fetching search results:", error);
@@ -49,9 +53,10 @@ const Adminpage = () => {
         }
     };
 
+
     const fetchData = async () => {
         try {
-            const response = await axios.get('https://plexus-backend-1.onrender.com/posts/');
+            const response = await axios.get('https://saleamlak-digital-marketing-backend.onrender.com/posts/');
             setItem(response.data);
             setLoading(false);
 
@@ -101,6 +106,12 @@ const Adminpage = () => {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        navigate("/signin");
+    };
     return (
         <div className="max-w-7xl mx-auto overflow-x-auto">
 
@@ -121,7 +132,7 @@ const Adminpage = () => {
                 <div className='  bg-red-500 rounded text-white  px-2 py-1  bg mx-2 my-2'>
                     <div className='text-center items-center'>
 
-                        <button onClick={() => signOut(auth)} className='text-sm'>logout</button>
+                        <button onClick={handleLogout} className='text-sm'>logout</button>
                     </div>
 
                 </div>
@@ -145,7 +156,7 @@ const Adminpage = () => {
 
 
 
-                    <div className="  w-full md:w-[350px]">
+                    {/* <div className="  w-full md:w-[350px]">
                         <form id="searchForm" className="flex" onSubmit="return false;">
                             <input
                                 value={searchQuery}
@@ -156,7 +167,7 @@ const Adminpage = () => {
                             </button>
                         </form>
                         <div id="searchResults" className="absolute w-full bg-white shadow-md rounded mt-1 hidden z-10"></div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

@@ -32,7 +32,7 @@ const AddBlogs = ({ onClose, onAdd }) => {
         formData.append('description', description);
 
         try {
-            const res = await axios.post('https://plexus-backend-1.onrender.com/posts/add', formData, {
+            const res = await axios.post('https://saleamlak-digital-marketing-backend.onrender.com/posts/add', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 

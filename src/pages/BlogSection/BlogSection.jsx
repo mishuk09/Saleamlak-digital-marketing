@@ -10,7 +10,7 @@ const BlogSection = () => {
     const [blog, setBlog] = useState([]);
 
     useEffect(() => {
-        fetch('https://digital-backend-7van.onrender.com/blogs')
+        fetch('https://saleamlak-digital-marketing-backend.onrender.com/posts/')
             .then(response => response.json())
             .then(data => {
                 // console.log("Fetched data:", data); // Debugging line
