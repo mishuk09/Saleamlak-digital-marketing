@@ -15,17 +15,19 @@ const ContactPage = () => {
                 <div className='  flex flex-col items-center bg-white p-6 rounded-lg shadow-lg'>
                     <h3 className='text-2xl font-semibold text-gray-800 mb-6'>Contact Information</h3>
                     <div className='w-full space-y-4'>
-                        <ContactDetail icon={<Mail size={20} />} label='Email' value='websiteslogan@gmail.com' />
-                        <ContactDetail icon={<Phone size={20} />} label='Call' value='+91 70xxxxxxx' />
-                        <ContactDetail icon={<MapPin size={20} />} label='Location' value='RK University, Rajkot, Gujarat, India' />
+                        <ContactDetail icon={<Mail size={20} />} label='Email' value='info@marketservo.com' />
+                        <ContactDetail icon={<Phone size={20} />} label='Call' value='+91 9824204169' />
+                        <ContactDetail icon={<MapPin size={20} />} label='Location' value='Rajkot, Gujarat, India' />
                         <iframe
                             className='rounded w-full h-60'
                             title='Google Map'
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66894.57039211194!2d83.91777138944921!3d28.216037765898744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara%2C%20Nepal!5e0!3m2!1sen!2sbd!4v1740762280601!5m2!1sen!2sbd"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147.6868911857!2d70.73889513395471!3d22.273625026941122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C%20Gujarat%2C%20India!5e0!3m2!1sen!2smy!4v1754644745139!5m2!1sen!2smy"
                             allowFullScreen
                             loading='lazy'
                             referrerPolicy='no-referrer-when-downgrade'
                         ></iframe>
+
+                        
 
 
                     </div>

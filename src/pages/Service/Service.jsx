@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from 'lucide-react';
 import web from '../../assets/web.png';
 import seo from '../../assets/seo.png';
-import graphic from '../../assets/graphic.png';
+import aiAgent from '../../assets/aiagent.png';
 import social from '../../assets/social.png';
-
 const services = [
     {
         name: "🌐 Web Development",
@@ -22,20 +21,21 @@ const services = [
         route: "/seo"
     },
     {
-        name: "🎨 Graphic Design",
-        image: graphic,
-        details: "Boost your brand's online presence through strategic marketing campaigns.",
+        name: "📈 Marketing",
+        image: social,
+        details: "Drive brand awareness and customer engagement through targeted marketing strategies.",
         icon: <ArrowUpRight size={20} />,
-        route: "/graphic"
+        route: "/marketing"
     },
     {
-        name: "📱 Social Media",
-        image: social,
-        details: "Build high-performance mobile applications tailored to your needs.",
+        name: "🤖 AI Agent Building",
+        image: aiAgent,
+        details: "Automate tasks and boost productivity with custom AI agents tailored to your business needs.",
         icon: <ArrowUpRight size={20} />,
-        route: "/social"
-    },
+        route: "/ai-agent-building"
+    }
 ];
+
 
 export default function Service() {
     const [selectedService, setSelectedService] = useState(services[0]);
