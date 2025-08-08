@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Code, Mail, Settings, Layers, MapPin, User, Lock, Copyright } from 'lucide-react';
+import mainlogo from './mainlogo.png';
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
 
                         {/* Branding Section */}
                         <div className="flex-1 flex flex-col items-center  md:items-center">
-                            <h2 className="text-white font-bold text-4xl">SEOMart</h2>
+                            <h2 className="text-white font-bold text-4xl">Market servo</h2>
                             <p className="font-nunito text-sm text-slate-300 mt-2 text-justify md:text-left">
                                 Your gateway to digital success! Elevate your brand with our cutting-edge strategies, driving meaningful growth.
                             </p>
@@ -37,12 +38,12 @@ const Footer = () => {
 
                         {/* Contact Section */}
                         <div className="flex-1 flex flex-col items-center md:items-start justify-center">
-                            <p className="font-bold text-blue-500 pb-2">Contact</p>
+                            <p className="font-bold text-blue-500 pb-2">Official Contact Info</p>
                             <p className="font-nunito text-sm mt-2">
                                 <MapPin className="inline-block mr-2" size={20} /> Rajkot, Gujarat, India
                             </p>
                             <p className="font-nunito text-sm mt-2">
-                                <Mail className="inline-block mr-2" size={20} /> services@seomart.org.in
+                                <Mail className="inline-block mr-2" size={20} /> info@marketservo.com
                             </p>
                             <div className="mt-3 space-x-4">
                                 <a href="https://mishukinfo.com/" target="_blank" rel="noopener noreferrer">
@@ -56,7 +57,8 @@ const Footer = () => {
 
                     </div>
                 </div>
-                <p className='text-gray-300 flex py-4  items-center justify-center'> <Copyright size={18} className='me-2'/>SEOMart - Digital Marketing Agency</p>
+                <p className='text-gray-300 flex py-4  items-center justify-center'> <Copyright size={18} className='me-2' />Market Servo – Digital Marketing & AI Automation Agency
+                </p>
 
 
             </div>

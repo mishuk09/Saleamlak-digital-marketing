@@ -21,6 +21,8 @@ import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css';
 import BlogSection from '../../../pages/BlogSection/BlogSection';
 import ServiceBtn from '../../ServiceBtn';
+import { CheckCircle } from 'lucide-react';
+
 
 
 const Seo = () => {
@@ -88,73 +90,65 @@ const Seo = () => {
             id: 1,
             img: index,
             title: "Crawling and Indexing",
-
+            description: "Screaming Frog, Google Search Console"
         },
         {
             id: 2,
             img: keyword,
             title: "Keyword Research Tools",
-
+            description: "SEMrush, Ahrefs, Ubersuggest"
         },
         {
             id: 3,
             img: cms,
             title: "CMS",
-
+            description: "WordPress, Webflow SEO"
         },
         {
             id: 4,
             img: data,
             title: "Structured Data Markup",
-
+            description: "Schema.org and JSON-LD"
         },
-
         {
             id: 5,
             img: opt,
             title: "WPO",
-
+            description: "Speed optimization via Lighthouse, GTmetrix"
         },
-
         {
             id: 6,
             img: backlink,
             title: "Backlink Analysis Tools",
-
+            description: "Moz, Ahrefs"
         },
         {
             id: 7,
             img: analysis,
             title: "Analytics Tools",
-
+            description: "Google Analytics, Mixpanel"
         },
         {
             id: 8,
             img: localseo,
             title: "Local SEO Tools",
-
+            description: "BrightLocal, Moz Local"
         },
         {
             id: 9,
             img: voice,
             title: "VSO",
-
-        },
-        {
-            id: 10,
-            img: ai,
-            title: "Artificial Intelligence",
-
-        },
-
-    ]
+            description: "Voice search optimization tools"
+        }
+    ];
     return (
         <div className=' '>
             <div className=''>
                 <div className=' max-w-7xl mx-auto'>
 
-                    <HomePage ch1='Seo Optimization' head1='Get Seo Service' head2='With' head3='Saleamlak' btnname="Get Seo Service" btnhref='/contact'
-                        description='Elevating online visibility and organic traffic through strategic optimization techniques' image={seo}>
+                    <HomePage ch1='Seo Optimization' head1='Get SEO Services That Actually Drive Growth' btnname="Book Free SEO Audit" btnhref='/contact'
+                        description='At Market Servo, we use data-backed strategies to boost your search rankings, drive targeted traffic, and increase qualified leads.
+' image={seo}>
                     </HomePage>
                 </div>
 
@@ -198,23 +192,36 @@ const Seo = () => {
 
             </div>
 
-            <div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center rounded-lg bg-sky-200 mt-24 p-6 md:h-[300px]'>
+            <div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center rounded-lg bg-sky-200 mt-24 p-6 md:h-[350px]'>
                 <div className='flex flex-col justify-center md:w-1/2 space-y-4'>
                     <h1 className='font-bold text-3xl font-nunito'>
-                        Exploring Top-tier SEO Agencies?
+                        Why Choose Market Servo for SEO?
                     </h1>
-                    <p className='text-justify font-nunito'>
-                        We merge seasoned expertise with innovative strategies, offering scalable solutions that harness trending techniques to elevate online visibility and drive organic traffic.
-                    </p>
-                    <p className=' md:w-1/3'>
-                        <ServiceBtn name='Get a free call ' href='/contact' />
+                    <ul className='space-y-2'>
+                        <li className='flex items-center'>
+                            <CheckCircle className="text-green-500 w-5 h-5 mr-2" /> 300+ Campaigns Executed
+                        </li>
+                        <li className='flex items-center'>
+                            <CheckCircle className="text-green-500 w-5 h-5 mr-2" /> AI-Powered Keyword Research
+                        </li>
+                        <li className='flex items-center'>
+                            <CheckCircle className="text-green-500 w-5 h-5 mr-2" /> Core Web Vitals Focus
+                        </li>
+                        <li className='flex items-center'>
+                            <CheckCircle className="text-green-500 w-5 h-5 mr-2" /> Full-Funnel SEO Strategy
+                        </li>
+                        <li className='flex items-center'>
+                            <CheckCircle className="text-green-500 w-5 h-5 mr-2" /> Results You Can Measure
+                        </li>
+                    </ul>
+                    <p className='md:w-1/3'>
+                        <ServiceBtn name='Get a Free Call' href='/contact' />
                     </p>
                 </div>
                 <div className='flex justify-center items-center md:w-1/2'>
                     <img className='p-2 w-[300px] h-auto' src={bestseo} alt="SEO Services" />
                 </div>
             </div>
-
 
 
             <div className='mt-[100px] max-w-7xl mx-auto  '>

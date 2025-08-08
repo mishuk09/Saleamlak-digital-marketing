@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Search, PhoneCall, ArrowUpRight } from 'lucide-react';
-import logo from '../../assets/logo.png'
+import mainlogo from './mainlogo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,8 @@ const Navbar = () => {
             <nav className="max-w-7xl mx-auto flex items-center justify-between px-2 py-6">
                 {/* Logo */}
                 <a href="/" className="text-2xl font-bold flex items-center">
-                    SEOMart
+                    <img src={mainlogo} alt="Main Logo" className="h-12 mr-2" />
+
                 </a>
 
                 {/* Mobile Toggle Button */}
@@ -81,11 +82,11 @@ const Navbar = () => {
                                 <a href="/seo" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="SEO" className="mr-2">🔍</span> SEO
                                 </a>
-                                {/* <a href="/graphic" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
-                                    <span role="img" aria-label="Marketing" className="mr-2">🎨</span>Graphic Design
-                                </a> */}
-                                <a href="social" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                                <a href="/social" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="App Development" className="mr-2">📱</span>Marketing
+                                </a>
+                                <a href="/ai" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                                    <span role="img" aria-label="App Development" className="mr-2">🤖 </span>AI Agent Building
                                 </a>
                             </div>
 

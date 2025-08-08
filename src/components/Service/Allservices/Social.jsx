@@ -6,17 +6,7 @@ import HomePage from '../../HomePage';
 
 import graphic from './img/socialmedia.png';
 import socialMediaaa from './img/socialMediaaa.png';
-import logo from './img/logo.png';
-import flayer from './img/flayer.png';
-import social from './img/social.png';
-import banner from './img/banner.png';
-import billbord from './img/billbord.png';
-import poster from './img/poster.png';
-import pak from './img/pak.png';
-import aii from './img/aii.png';
-import ps from './img/ps.png';
-import figma from './img/figma.png';
-import canva from './img/canva.png';
+
 // import { PenTool, Image, Instagram, Clipboard, Landmark, FileText, Package } from "lucide-react";
 import { Megaphone, Users, TrendingUp, MessageSquare, Globe, PlayCircle, BarChart, Facebook, Instagram, Twitter, Linkedin, Youtube, Zap } from "lucide-react";
 
@@ -41,16 +31,49 @@ const Social = () => {
             items: 1
         }
     };
-
-
     const socialMediaItems = [
-        { id: 1, img: <Megaphone size={80} className="text-green-500" />, title: "Ad Campaigns", details: "Targeted and data-driven marketing." },
-        { id: 2, img: <Users size={80} className="text-blue-500" />, title: "Community Management", details: "Engaging and growing your audience." },
-        { id: 3, img: <TrendingUp size={80} className="text-purple-500" />, title: "SEO & Optimization", details: "Boosting reach and visibility." },
-        { id: 4, img: <MessageSquare size={80} className="text-orange-500" />, title: "Content Marketing", details: "Creative and compelling storytelling." },
-        { id: 5, img: <Globe size={80} className="text-red-500" />, title: "Brand Awareness", details: "Building a strong online presence." },
-        { id: 6, img: <PlayCircle size={80} className="text-yellow-500" />, title: "Video Marketing", details: "Engaging visuals and storytelling." },
-        { id: 7, img: <BarChart size={80} className="text-teal-500" />, title: "Analytics & Insights", details: "Tracking performance for growth." }
+        {
+            id: 1,
+            img: <Megaphone size={80} className="text-orange-500" />,
+            title: "Content Marketing",
+            details: "Attract and convert your audience with blog posts, scripts, and email content."
+        },
+        {
+            id: 2,
+            img: <Users size={80} className="text-red-500" />,
+            title: "Brand Awareness",
+            details: "Position your brand across platforms to maximize recognition and trust."
+        },
+        {
+            id: 3,
+            img: <TrendingUp size={80} className="text-yellow-500" />,
+            title: "SEO & Optimization",
+            details: "Optimize campaigns for organic reach and better search rankings."
+        },
+        {
+            id: 4,
+            img: <MessageSquare size={80} className="text-green-500" />,
+            title: "Video Marketing",
+            details: "Create short and long-form videos for Reels, TikTok, YouTube, and ads."
+        },
+        {
+            id: 5,
+            img: <Globe size={80} className="text-teal-500" />,
+            title: "Analytics & Insights",
+            details: "Track KPIs to understand behavior, ROI, and conversion trends."
+        },
+        {
+            id: 6,
+            img: <PlayCircle size={80} className="text-purple-500" />,
+            title: "Ad Campaigns",
+            details: "Target ads on Facebook, Instagram, Google, and LinkedIn for conversions."
+        },
+        {
+            id: 7,
+            img: <BarChart size={80} className="text-blue-500" />,
+            title: "Community Management",
+            details: "Grow online communities through human + AI-powered interactions."
+        }
     ];
 
 
@@ -59,46 +82,55 @@ const Social = () => {
             id: 1,
             img: <Facebook size={50} className="text-blue-600" />,
             title: "Facebook Ads",
+            description: "Campaigns + retargeting",
         },
         {
             id: 2,
             img: <Instagram size={50} className="text-pink-500" />,
             title: "Instagram Marketing",
+            description: "Reels, carousels, Stories",
         },
         {
             id: 3,
             img: <Twitter size={50} className="text-blue-400" />,
             title: "Twitter Promotions",
+            description: "Brand positioning + trends",
         },
         {
             id: 4,
             img: <Linkedin size={50} className="text-blue-700" />,
             title: "LinkedIn Outreach",
+            description: "B2B campaigns",
         },
         {
             id: 5,
             img: <Youtube size={50} className="text-red-500" />,
             title: "YouTube Advertising",
+            description: "Video funnel ads",
         },
         {
             id: 6,
             img: <BarChart size={50} className="text-green-500" />,
             title: "Analytics & Insights",
+            description: "Meta insights, GA4",
         },
         {
             id: 7,
             img: <Zap size={50} className="text-yellow-500" />,
             title: "Automation & AI Tools",
+            description: "n8n, GPT, Buffer",
         }
+    ];
 
 
-    ]
+
     return (
         <div className='  '>
             <div className=' '>
                 <div className=' max-w-7xl mx-auto'>
-                    <HomePage ch1='Social Media' head1='Get Marketing' head2='from' head3='Saleamlak' btnname="Get social service" btnhref='/contact'
-                        description='We specialize in crafting powerful social media marketing strategies that not only boost engagement but also drive real results! 🚀.' image={graphic}>
+                    <HomePage ch1='Social Media' head1='Elevate Your Brand with Data-Driven Marketing Strategies
+'   btnname="Get a Custom Marketing Plan" btnhref='/contact'
+                        description='At Market Servo, we craft full-funnel marketing campaigns designed to build visibility, boost engagement, and drive real business growth.🚀.' image={graphic}>
                     </HomePage>
 
                 </div>
@@ -159,28 +191,32 @@ const Social = () => {
                 </div>
             </div>
 
-            <div className='mt-[100px] max-w-7xl mx-auto  '>
-                <Headline headline=" Technology we work on" ch1="Technology" ch2="We" ch3="Use" seeMore={false} />
-                <div className="grid grid-cols-2  lg:grid-cols-7 bg-white p-5 gap-4 lg:gap-6 mt-6 justify-center  ">
+
+            <div className='mt-[100px] max-w-7xl mx-auto'>
+                <Headline headline="Technology we work on" ch1="Technology" ch2="We" ch3="Use" seeMore={false} />
+                <div className="grid grid-cols-2 lg:grid-cols-7 bg-white p-5 gap-4 lg:gap-6 mt-6 justify-center">
                     {techItem.map((tutorial) => (
                         <div
                             key={tutorial.id}
-                            className="shadow-md rounded-lg p-4 text-center transition-transform duration-300 hover:scale-105 bg-gray-50"
+                            className="shadow-md rounded-lg p-4 text-center transition-transform duration-300 hover:scale-105 bg-gray-50 relative group"
                         >
                             <div className="w-[80px] h-[80px] mx-auto flex items-center justify-center overflow-hidden">
-                                {/* <img
-                                    className="w-full h-full object-cover rounded-md"
-                                    src={tutorial.img}
-                                    alt={tutorial.title}
-                                /> */}
                                 {tutorial.img}
                             </div>
                             <p className="text-gray-800 mt-3 font-semibold text-sm">{tutorial.title}</p>
+
+                            {/* Professional Tooltip with Arrow */}
+                            <div className="absolute bottom-[110%] left-1/2 transform -translate-x-1/2 mb-2 p-4 bg-blue-600 text-white text-lg rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg z-10">
+                                <div className="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-3 h-3 bg-blue-600 rotate-45"></div>
+                                {tutorial.description}
+                            </div>
                         </div>
                     ))}
                 </div>
-
             </div>
+
+
+
             <BlogSection />
 
         </div>

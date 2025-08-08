@@ -21,8 +21,8 @@ const Home = () => {
                     <h1 className=' text-4xl md:text-6xl font-bold text-gray-800 leading-tight'>
                         Grow Your Business <br /> with
                         <span className='text-blue-600 ms-4 inline-block'>
-                            Saleamlak
-                           
+                            Marketservo
+
                             <div className='mt-[-10px]'>
                                 <img src={underimg} alt="undereffect" className='w-[150px] md:w-[230px] h-auto' />
                             </div>

@@ -24,7 +24,7 @@ function ChildApp() {
             <Project />
             <Success />
             <SetupProcess />
-            <Price />
+            {/* <Price /> */}
             <Testimonials />
             {/* <Headline headline=" Let's update with our Blog" ch1="Our" ch2="Latest" ch3="Blog" seemore="/blog " /> */}
             <BlogSection />

@@ -51,10 +51,12 @@ const About = () => {
                 <div style={clipPathStyletwo} className="pt-10 w-full h-[400px] flex flex-col text-center">
                     <div className="max-w-7xl mx-auto">
                         <h1 className="text-slate-100 mt-10 text-5xl font-sans font-bold">
-                           Know About <span className="text-blue-500">Saleamlak</span>
+                            Building Brands Through Strategy, Automation, and Growth
+                            <span className="text-blue-500"> </span>
                         </h1>
                         <p className="text-slate-300 sm:w-[50%] mx-auto mt-4 font-nunito">
-                            Unlocking the Power of Mindfulness! Learn how practicing mindfulness can transform your daily life, reduce stress, and enhance well-being in this comprehensive guide.
+                            Founded by Saleamlak, Market Servo is a digital marketing and automation agency helping businesses grow smarter — not just bigger.
+
                         </p>
                         <div className="mt-10 mx-auto flex justify-center">
                             <ServiceBtn href="/contact" name="Write your query" />
@@ -65,7 +67,7 @@ const About = () => {
 
 
             <div className="max-w-7xl mx-auto px-4 py-10">
-          
+
 
 
                 <section className="custom-container mt-14 mb-20">

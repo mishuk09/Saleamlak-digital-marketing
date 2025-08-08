@@ -6,13 +6,11 @@ import ChildApp from './ChildApp'
 import ContactPage from './components/contactpage/Contactpage'
 import Web from './components/Service/Allservices/Web'
 import Seo from './components/Service/Allservices/Seo'
-import Graphic from './components/Service/Allservices/Graphic'
 import Social from './components/Service/Allservices/Social'
 // import Blog from './pages/Blog/Blog'
 import BlogDetails from './pages/Blog/BlogDetails'
 import BlogMain from './pages/Blog/BlogMain'
 import Signin from './components/Login/Signin'
-import RequireAuth from './components/RequireAuth/RequireAuth'
 import Adminpage from './components/Login/Adminpage/Adminpage'
 import ManageBlog from './components/Login/Adminpage/DeletePost'
 import AddBlogs from './pages/Blog/AddBlogs'
@@ -21,6 +19,7 @@ import About from './pages/About/About'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import SignUp from './components/Login/Signup'
 import ProtectedRoute from './components/utills/ProtectedRoute'
+import Ai from './components/Service/Allservices/Ai'
 // import BlogMain from './pages/Blog/BlogMain'
 
 function App() {
@@ -36,6 +35,7 @@ function App() {
         <Route path='/addnewadmin' element={<SignUp />} />
         <Route path='/web' element={<Web />} />
         <Route path='/seo' element={<Seo />} />
+        <Route path='/ai' element={<Ai />} />
         {/* <Route path='/graphic' element={<Graphic />} /> */}
         <Route path='/social' element={<Social />} />
         <Route path='/about' element={<About />} />

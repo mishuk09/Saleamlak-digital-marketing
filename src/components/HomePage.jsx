@@ -20,15 +20,13 @@ const HomePage = ({
             {/* Left Section */}
             <div className=" flex flex-col items-center text-center md:text-start mt-10 md:mt-20 relative">
 
-                <div className="space-y-5">
+                <div className=" ">
                     <p className="text-blue-600 font-semibold">{ch1}</p>
                     <h1 className=' text-4xl md:text-6xl font-bold text-gray-800 leading-tight'>
                         {head1}<br /> {head2}
                         <span className='text-blue-600 ms-4 inline-block'>
                             {head3}
-                            <div className='mt-[-10px]'>
-
-                            </div>
+                            
                         </span>
                     </h1>
 

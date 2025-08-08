@@ -3,15 +3,71 @@ import { useState } from "react";
 import onecoin from '../../assets/onecoin.png'
 import mulcoin from '../../assets/mulcoin.png'
 
-
-
 const Price = () => {
     const [billingCycle, setBillingCycle] = useState("annually");
 
     const plans = [
-        { name: "Standard", price: 22, popular: false },
-        { name: "Business", price: 33, popular: true },
-        { name: "Ultimate", price: 44, popular: false },
+        {
+            name: "Starter",
+            price: 499,
+            popular: false,
+            description: "Best for: Getting online visibility",
+            features: [
+                "✅ Website audit + minor fixes",
+                "✅ Local SEO setup (Google My Business)",
+                "✅ 12 social media posts/month",
+                "✅ 1 paid campaign setup (Google or Meta)",
+                "✅ Basic analytics report (monthly)"
+            ]
+        },
+        {
+            name: "Growth",
+            price: 999,
+            popular: true,
+            description: "Best for: Growing traction and reach",
+            features: [
+                "✅ Full on-page SEO + keyword strategy",
+                "✅ Google + Meta ads (2 platforms, 2 campaigns)",
+                "✅ Monthly blog content (3 posts)",
+                "✅ Social media management (12 posts/month)",
+                "✅ Custom landing page",
+                "✅ Conversion tracking setup",
+                "✅ Monthly performance call",
+                "✅ Email marketing setup (Klaviyo / Mailchimp)"
+            ]
+        },
+        {
+            name: "Scale",
+            price: 1999,
+            popular: false,
+            description: "Best for: Serious scale and lead generation",
+            features: [
+                "✅ All Growth features",
+                "✅ Multi-channel ads (Google, Meta, LinkedIn)",
+                "✅ CRO + funnel optimization",
+                "✅ Technical SEO (site speed, schema, Core Web Vitals)",
+                "✅ A/B testing & analytics dashboards",
+                "✅ Custom email flows (abandoned cart, welcome series)",
+                "✅ Web dev changes & support",
+                "✅ Bi-weekly reporting + Slack support"
+            ]
+        },
+        {
+            name: "Enterprise / Custom Plan",
+            price: "Custom",
+            popular: false,
+            description: "Custom solution for your business",
+            features: [
+                "✅ Multi-page, multi-lingual site + custom CMS + advanced UI Website Building",
+                "✅ Full local + international SEO with schema + backlink outreach",
+                "✅ Omnichannel ads (Google, Meta, LinkedIn, YouTube, Pinterest)",
+                "✅ 10+ campaigns/month + 5 automated flows",
+                "✅ WhatsApp + Email + CRM + Lead qualification bots",
+                "✅ Video production, AI blog creation, copywriting",
+                "✅ Funnel mapping, heatmaps, conversion rate optimization",
+                "✅ Weekly strategy calls, reporting dashboards, Slack channel"
+            ]
+        },
     ];
 
     return (
@@ -40,9 +96,10 @@ const Price = () => {
                         <div className="h-5 w-5 bg-white rounded-full transform transition-transform peer-checked:translate-x-7"></div>
                     </div>
                 </label>
-                <span className="text-gray-600">Annually - Save 50%</span>
+                <span className="text-gray-600">Annually - Save 20%</span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 w-full max-w-5xl">
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10 w-full max-w-7xl">
                 {plans.map((plan, index) => (
                     <div
                         key={index}
@@ -53,29 +110,25 @@ const Price = () => {
                             <div className="absolute top-0 right-0 bg-blue-600 text-white text-sm px-3 py-1 rounded-tr-2xl rounded-bl-2xl">
                                 Popular
                             </div>
-
                         )}
                         <h3 className="text-lg font-semibold mb-2">{plan.name}</h3>
                         <p className="text-4xl font-bold mb-2">
-                            ${billingCycle === "annually" ? plan.price : plan.price * 2}
+                            {plan.price === "Custom" ? "Contact for pricing" : `$${billingCycle === "annually" ? plan.price : plan.price * 12 * 0.8}`}
                             <span className="text-sm font-normal"> per user/month</span>
                         </p>
-                        <p className="text-sm text-gray-500 mb-4">billed {billingCycle}</p>
+                        <p className="text-sm text-gray-500 mb-4">{plan.description}</p>
                         <ul className="text-gray-600 space-y-2 text-sm mb-6">
-                            <li>✅ Individuals & small projects</li>
-                            <li>✅ Access to design features</li>
-                            <li>✅ Limited library of decorative items</li>
-                            <li>✅ Email support</li>
-                            <li>✅ Monthly updates</li>
+                            {plan.features.map((feature, idx) => (
+                                <li key={idx}>{feature}</li>
+                            ))}
                         </ul>
-
 
                         <a
                             href={plan.popular}
                             className={`pe-2 w-40 ps-4 cursor-pointer mt-6 py-1 ${plan.popular
                                 ? "bg-blue-600 text-white hover:bg-black"
                                 : "bg-black text-white hover:bg-blue-500"
-                                }   text-white   hover:text-white transition-all duration-300 ease-in-out rounded-full font-medium flex items-center space-x-2`}
+                                } text-white hover:text-white transition-all duration-300 ease-in-out rounded-full font-medium flex items-center space-x-2`}
                         >
                             <span>Get Started</span>
                             <span className="rounded-full px-2 py-2 price-btn bg-white text-blue-500">

@@ -8,22 +8,50 @@ import Headline from '../../components/Headline';
 
 const BlogSection = () => {
     const [blog, setBlog] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://saleamlak-digital-marketing-backend.onrender.com/posts/')
             .then(response => response.json())
             .then(data => {
-                // console.log("Fetched data:", data); // Debugging line
-                if (Array.isArray(data.blogs)) { // Check if blogs exists and is an array
-                    setBlog(data.blogs.slice(0, 4));
+                if (Array.isArray(data)) { // Corrected check
+                    setBlog(data.slice(0, 4));
+                    setLoading(false);
                 } else {
-                    console.error("API response does not contain an array:", data);
+                    console.error("API response is not an array:", data);
                 }
             })
             .catch(error => console.error("Fetch error:", error));
     }, []);
 
-
+    // {
+    //     if (loading) {
+    //         return (
+    //             <div className="flex justify-center items-center h-screen">
+    //                 <svg
+    //                     className="animate-spin h-10 w-10 text-blue-500"
+    //                     xmlns="http://www.w3.org/2000/svg"
+    //                     viewBox="0 0 24 24"
+    //                 >
+    //                     <circle
+    //                         className="opacity-25"
+    //                         cx="12"
+    //                         cy="12"
+    //                         r="10"
+    //                         fill="none"
+    //                         strokeWidth="4"
+    //                         stroke="currentColor"
+    //                     />
+    //                     <path
+    //                         className="opacity-75"
+    //                         fill="currentColor"
+    //                         d="M4 12a8 8 0 1 1 16 0A8 8 0 0 1 4 12zm2.5-1h9a2.5 2.5 0 1 1-9 0z"
+    //                     />
+    //                 </svg>
+    //             </div>
+    //         );
+    //     }
+    // }
 
 
     return (
@@ -31,6 +59,31 @@ const BlogSection = () => {
 
             <Headline headline=" Let's update with our Blog" ch1="Our" ch2="Latest" ch3="Blog" seemore="/blog " />
 
+            {loading && (
+                <div className="flex justify-center items-center h-screen">
+                    <svg
+                        className="animate-spin h-10 w-10 text-blue-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                    >
+                        <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            fill="none"
+                            strokeWidth="4"
+                            stroke="currentColor"
+                        />
+                        <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 1 1 16 0A8 8 0 0 1 4 12zm2.5-1h9a2.5 2.5 0 1 1-9 0z"
+                        />
+                    </svg>
+                </div>
+
+            )}
             <div className="grid mt-10 md:grid-cols-4 gap-10">
                 {/* Main Blog Section */}
                 <div className="md:col-span-2">
@@ -41,7 +94,7 @@ const BlogSection = () => {
 
                             >
                                 <img
-                                    src={post.photourl}
+                                    src={post.img}
                                     alt="Main Blog"
                                     className="w-full h-[400px] object-cover rounded-lg"
                                 />
@@ -63,7 +116,7 @@ const BlogSection = () => {
                     {blog.slice(1, 4).map((post) => (
                         < a href={`/product/${post._id}`} key={post._id} className="flex    hover:shadow-lg transition-all duration-300 delay-100 cursor-pointer  border-gray-300  rounded-lg shadow items-center gap-4">
                             <img
-                                src={post.photourl}
+                                src={post.img}
                                 alt={post.name}
                                 className="w-40 h-40 rounded-lg object-cover"
                             />

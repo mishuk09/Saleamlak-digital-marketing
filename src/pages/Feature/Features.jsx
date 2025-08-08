@@ -4,22 +4,22 @@ const features = [
     {
         icon: <LineChart className="text-blue-500 w-10 h-10" />,
         title: "Real Time Analytics",
-        description: "Digital marketing involves the promotion of products."
+        description: "Track campaign performance, user behavior, and ROI instantly to make smarter, faster decisions."
     },
     {
         icon: <TrendingUp className="text-green-500 w-10 h-10" />,
         title: "Keywords Analytics",
-        description: "Digital marketing involves the promotion of products."
+        description: "Identify high-performing keywords and uncover new opportunities to dominate your niche."
     },
     {
         icon: <Search className="text-red-500 w-10 h-10" />,
         title: "SEO Optimization",
-        description: "Digital marketing involves the promotion of products."
+        description: "Enhance search rankings through SEO strategies that drive traffic and long-term growth."
     },
     {
         icon: <BarChart className="text-yellow-500 w-10 h-10" />,
         title: "Boost Performance",
-        description: "Digital marketing involves the promotion of products.",
+        description: "Optimize speed, UI/UX, and conversion paths to increase engagement and results.",
         highlighted: true
     }
 ];
@@ -27,7 +27,7 @@ const features = [
 export default function Features() {
     return (
         <>
-                <img src={dot} alt="" className="absolute  mt-17 w-[200px] " />
+            <img src={dot} alt="" className="absolute  mt-17 w-[200px] " />
             <div className="mt-20  ">
 
                 <div className="bg-blue-50 relative z-20 max-w-7xl rounded-md  mx-auto py-12 px-6 md:px-14">
@@ -36,8 +36,8 @@ export default function Features() {
                         <div>
                             <p className="text-gray-600 font-medium text-center md:text-start text-lg">Why <span className="text-blue-500 text-sm rounded-full  py-1 px-2 bg-gray-300">Choose</span> Us</p>
 
-                            <h2 className="text-4xl mt-4 text-center md:text-start md:text-5xl font-bold text-gray-800  ">Take your website to the next level</h2>
-                            <p className="text-gray-600 text-lg mt-6">We curate an excellent quality hand-crafted email template designs that</p>
+                            <h2 className="text-4xl mt-4 text-center md:text-start md:text-5xl font-bold text-gray-800  ">Take your SEO performance to the next level</h2>
+                            <p className="text-gray-600 text-lg mt-6">We craft high-converting email templates and SEO-optimized content to help your business grow online.</p>
                             <div className="flex items-center mt-6 space-x-3">
                                 <div className="flex -space-x-2 overflow-hidden">
                                     <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User1" className="w-10 h-10 rounded-full border-2 border-white" />
@@ -62,7 +62,7 @@ export default function Features() {
                                 >
                                     {feature.icon}
                                     <h3 className="text-lg font-bold text-gray-900 mt-4">{feature.title}</h3>
-                                    <p className="text-gray-600 mt-2">{feature.description}</p>
+                                    <p className="text-gray-600 justify-self-auto mt-2">{feature.description}</p>
                                 </div>
                             ))}
                         </div>

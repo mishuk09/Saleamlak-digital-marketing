@@ -65,12 +65,18 @@ const Web = () => {
             <div >
                 <div className='max-w-7xl mx-auto'>
 
-                    <HomePage ch1='Website ' head1='Get website' head2='With' head3='Saleamlak' btnname="Get your website" btnhref='/contact'
-                        description='We specialize in creating fantastic websites that not only look great but also function smoothly.' image={web}>
-                    </HomePage>
+                    <HomePage
+                        ch1='Website'
+                        head1='Custom Web Development for Ambitious Brands'
+                        btnname="Get Your Free Strategy Call"
+                        btnhref='/contact'
+                        description='We create high-performance, scalable websites using modern tech stacks like React, WordPress, and Node.js to drive conversions.'
+                        image={web}
+                    />
+
                 </div>
                 <div className='mt-20'>
-                    <Headline headline=" Our Wetsite Services" ch1="Our" ch2="Web" ch3="Service" seeMore={false} />
+                    <Headline headline=" Our Website Services" ch1="Our" ch2="Web" ch3="Service" seeMore={false} />
 
                 </div>
                 <div className='bg-blue-50'>
@@ -112,7 +118,7 @@ const Web = () => {
                             Combining experience and innovation, we provide scalable solutions that leverage trending technologies.
                         </p>
                         <p>
-                           
+
                         </p>
                     </div>
                     <div className='flex justify-center items-center md:w-1/2'>
