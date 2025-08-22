@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Code, Mail, Settings, Layers, MapPin, User, Lock, Copyright } from 'lucide-react';
+import { Facebook, Instagram, Code, Mail, Settings, Layers, MapPin, User, Lock, Copyright, PhoneCall, Linkedin, X, Youtube } from 'lucide-react';
 import mainlogo from './mainlogo.png';
 
 const Footer = () => {
@@ -21,6 +21,9 @@ const Footer = () => {
                             <p className="font-bold text-blue-500 pb-2">All About</p>
                             <a href="/about" className="font-nunito text-sm mt-2 hover:text-blue-500">
                                 <User className="inline-block mr-2" size={20} /> About
+                            </a>
+                            <a href="/contact" className="font-nunito text-sm mt-2 hover:text-blue-500">
+                                <PhoneCall className="inline-block mr-2" size={20} /> Contact
                             </a>
                             <a href="/web" className="font-nunito text-sm mt-2 hover:text-blue-500">
                                 <Code className="inline-block mr-2" size={20} /> Web
@@ -46,11 +49,20 @@ const Footer = () => {
                                 <Mail className="inline-block mr-2" size={20} /> info@marketservo.com
                             </p>
                             <div className="mt-3 space-x-4">
-                                <a href="https://mishukinfo.com/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com/marketservo" target="_blank" rel="noopener noreferrer">
                                     <Facebook className="inline-block hover:text-blue-500" size={24} />
                                 </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/marketservo?igsh=YTk5cTRlbG00a3U2" target="_blank" rel="noopener noreferrer">
                                     <Instagram className="inline-block hover:text-blue-500" size={24} />
+                                </a>
+                                <a href="https://www.linkedin.com/company/108662115/admin/page-posts/published/" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin className="inline-block hover:text-blue-500" size={24} />
+                                </a>
+                                <a href="https://x.com/marketservo" target="_blank" rel="noopener noreferrer">
+                                    <X className="inline-block hover:text-blue-500" size={24} />
+                                </a>
+                                <a href="https://www.youtube.com/@Marketservo" target="_blank" rel="noopener noreferrer">
+                                    <Youtube className="inline-block hover:text-blue-500" size={24} />
                                 </a>
                             </div>
                         </div>

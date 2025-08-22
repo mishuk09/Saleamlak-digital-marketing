@@ -73,13 +73,13 @@ const About = () => {
                 <section className="custom-container mt-14 mb-20">
                     <div className="flex flex-col items-center text-center justify-center">
                         <p className="text-[12px]">
-                            WELCOME TO PLEXUS
+                            WELCOME TO MARKETSERVO
                         </p>
                         <p className="text-[20px] md:text-[36px] font-semibold text-gray-800">
-                            Results-Driven Digital Marketing Solutions
+                            Where AI Meets Marketing Excellence
                         </p>
                         <p className="text-[16px] text-gray-600 w-full text-justify md:text-center mt-4 md:w-[70%]">
-                            With over 20 years of combined expertise, we craft impactful strategies tailored to elevate your brand's online presence, drive measurable growth, and deliver real results in an ever-evolving digital world.
+                            We’re not just another agency—we’re a next-generation growth partner. MarketServo blends human creativity with AI-driven insights to deliver campaigns that adapt, optimize, and perform in today’s fast-changing digital world.
                         </p>
                     </div>
 
@@ -145,9 +145,11 @@ const About = () => {
                             </p>
                             <p className="text-[20px] md:text-[36px] font-semibold text-gray-800">
                                 Timeless Strategies, Measurable Growth
+
                             </p>
                             <p className="text-[16px] mt-4 text-gray-600 w-full md:w-[90%]">
-                                At Aliyl Digital, we focus on strategies that last. Our campaigns are crafted with precision and built to deliver consistent results. From SEO to paid ads, every move is based on insights and quality execution—designed to work today, tomorrow, and long into the future.
+                                At MarketServo, we build strategies that stand the test of time. Every campaign—whether SEO, paid ads, or automation—is crafted with precision, backed by data, and executed with quality. Our focus is on creating results that work not just today, but tomorrow and for years to come.
+
                             </p>
                             <button className="factory-btn rounded-full mt-6">
                                 EXPLORE OUR WORK
@@ -172,10 +174,10 @@ const About = () => {
                     <div className="flex flex-col items-center text-center justify-center">
                         <p className="text-[12px]">WHY CHOOSE US</p>
                         <p className="text-[20px] md:text-[36px] font-semibold text-gray-800">
-                            What Makes Us Different
+                            What Sets MarketServo Apart
                         </p>
                         <p className="text-[16px] text-gray-600 w-full md:w-[70%] mt-4">
-                            At Aliyl Digital, we blend creativity, strategy, and data-driven decisions to deliver marketing that’s not just smart—but unforgettable. Here’s what sets us apart.
+                            At MarketServo, we don’t just run campaigns—we engineer growth. By combining creativity, strategy, and data-driven execution, we deliver marketing that’s not only effective but unforgettable. Here’s why businesses trust us.
                         </p>
                     </div>
 

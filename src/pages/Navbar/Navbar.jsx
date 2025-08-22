@@ -82,7 +82,7 @@ const Navbar = () => {
                                 <a href="/seo" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="SEO" className="mr-2">🔍</span> SEO
                                 </a>
-                                <a href="/social" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
+                                <a href="/marketing" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">
                                     <span role="img" aria-label="App Development" className="mr-2">📱</span>Marketing
                                 </a>
                                 <a href="/ai" className="block text-gray-800 hover:text-blue-600 text-base font-semibold py-1 px-2 rounded-md transition duration-300 ease-in-out transform hover:scale-105">

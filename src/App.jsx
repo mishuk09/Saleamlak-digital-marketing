@@ -37,7 +37,7 @@ function App() {
         <Route path='/seo' element={<Seo />} />
         <Route path='/ai' element={<Ai />} />
         {/* <Route path='/graphic' element={<Graphic />} /> */}
-        <Route path='/social' element={<Social />} />
+        <Route path='/marketing' element={<Social />} />
         <Route path='/about' element={<About />} />
         <Route path='/privacy' element={<PrivacyPolicy />} />
 

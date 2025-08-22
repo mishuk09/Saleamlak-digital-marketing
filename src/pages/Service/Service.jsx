@@ -25,14 +25,14 @@ const services = [
         image: social,
         details: "Drive brand awareness and customer engagement through targeted marketing strategies.",
         icon: <ArrowUpRight size={20} />,
-        route: "/marketing"
+        route: "/social"
     },
     {
         name: "🤖 AI Agent Building",
         image: aiAgent,
         details: "Automate tasks and boost productivity with custom AI agents tailored to your business needs.",
         icon: <ArrowUpRight size={20} />,
-        route: "/ai-agent-building"
+        route: "/ai"
     }
 ];
 
