@@ -47,7 +47,7 @@ export default function Blog() {
             .catch(error => console.error("Fetch error:", error));
     }, []);
 
-
+//return jsx
     return (
         <div className="bg-blue-50">
             <div style={clipPathStyle} className="bg-slate-200 relative w-full h-[400px] flex flex-col">
